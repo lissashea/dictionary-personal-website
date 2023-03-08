@@ -1,0 +1,163 @@
+/* general styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Karmina Sans', sans-serif;
+}
+
+/* header styles */
+header {
+  background-color: black;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+h1 {
+  font-size: 48px;
+  color: white;
+}
+
+/* main section styles */
+main {
+  background-image: url(dictionary_definition.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  background-image: url(images/other-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.left-column, .right-column {
+  width: 100%;
+  max-width: 540px;
+  margin-bottom: 40px;
+}
+
+.right-column {
+  order: -1;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  background-color: black;
+
+}
+
+h3 {
+  font-size: 24px;
+  margin-top: 40px;
+  background-color: black;
+
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  background-color: black;
+  padding: 20px;
+}
+
+ul {
+  font-size: 20px;
+  list-style: none;
+  margin-top: 40px;
+  text-align: left;
+  list-style: disc;
+  margin-left: 30px;
+  background-color: black;
+
+}
+
+li {
+  margin-bottom: 20px;
+}
+
+/* footer styles */
+footer {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* book cover and button styles */
+.book-cover-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.book-cover-container img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#open-book-btn {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#open-book-btn:hover {
+  background-color: #69696d;
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* navigation styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+nav a {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333333;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav a:hover {
+  color: white;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+/* styles to hide the main content initially */
+.hidden {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .main-content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
