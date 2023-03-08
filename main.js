@@ -11,3 +11,12 @@ openBookBtn.addEventListener('click', function() {
   bookCover.style.display = 'none';
   mainContent.style.display = 'grid';
 });
+
+const pronounceButton = document.querySelector('#pronounce');
+const audio = document.querySelector('#audio');
+
+pronounceButton.addEventListener('click', () => {
+  audio.currentTime = 0;
+  audio.play();
+});
+

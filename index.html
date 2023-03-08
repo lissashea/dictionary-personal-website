@@ -6,39 +6,49 @@
     <title>My Personal Profile</title>
     <link href="https://fonts.googleapis.com/css2?family=Karmina+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <div class="book-cover-container">
-       <img src="image/image_w_background.jpg" alt="Book Cover">
-       <button id="open-book-btn">Look up "Lissa" in the dictionary</button>
+       <img src="image/pink_dictionary.jpg" alt="Book Cover">
+       <button id="open-book-btn">Look up "Lissa"</button>
     </div>
     <header>
-        <h1>My Personal Profile</h1>
-          <nav>
-            <a href="#about-me">About Me</a>
-            <a href="#profile">Profile</a>
-            <a href="#contact">Contact</a>
+        <h1>Lissa Warshaw</h1>
+        <div class="pronounce-container">
+            <p>/liss-UH/ /w-AW-r-sh-AW/</p>
+            <button id="pronounce" class="btn-mic" role="button" aria-label="Pronounce">
+            <i class="material-icons">mic</i>
+            </button>
+            <span class="pronounce-text">Click here for pronunciation</span>
+            <audio id="audio" src="sound/pronounciation.mp3"></audio>
+         </div>
+        </div>
+          <nav class="click">
+            <a href="#about-me">origin</a>
+            <a href="#profile">works</a>
+            <a href="#contact">contact</a>
           </nav>
     </header>
     <main>
       <div class="container">
         <div class="left-column">
             <h2>Definition:</h2>
-            <h3>Noun:</h3>
-            <p>Enter your definition here.</p>
-            <h3>Adjective:</h3>
-            <p>Enter your adjective here.</p>
-            <h3>Verb:</h3>
-            <p>Enter your verb here.</p>
+            <span id="italicized"><h2>Noun</h2></span>
+            <p>a driven and innovative computer engineer, fluent in fundamental programming concepts and passionate about developing creative solutions to complex problems</p>
+            <h3>Synonyms:</h3>
+            <p>dedicated, loyal, determined, ambitious, resourceful, forward-thinking</p>
+            <!-- <h3>Verb:</h3> -->
+            <!-- <p>Enter your verb here.</p> -->
         </div>
         <div class="right-column">
-            <h2>Synonyms:</h2>
-            <p>Enter your synonyms here.</p>
+            <!-- <h2>Synonyms:</h2>
+            <p>dedicated, loyal, determined, ambitious, resourceful, forward-thinking</p> -->
             <h2>Use in a sentence:</h2>
             <ul>
-                <li>Enter your sentence here.</li>
-                <li>Enter your sentence here.</li>
-                <li>Enter your sentence here.</li>
+                <li>"Lissa Warshaw would be an excellent candidate for any entry level software engineering position."</li>
+                <li>"Lissa Warshaw is an excellent tennis and pickleball player! She is always looking for people to play with her!"</li>
+                <li>"Lissa Warshaw is such a great team-player! Everyone enjoys working with her, she cultivates a safe space for ideas and collaborative work!"</li>
             </ul>
         </div>
     </div>

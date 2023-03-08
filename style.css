@@ -15,11 +15,20 @@ header {
   text-align: center;
   padding: 20px;
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.click {
+  text-align: center;
 }
 
 h1 {
   font-size: 48px;
   color: white;
+  padding-top: 20px;
 }
 
 /* main section styles */
@@ -37,7 +46,7 @@ main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px;
-  background-image: url(images/other-bg.jpg);
+  background-image: url(image/dictionary_definition.jpeg);
   background-size: cover;
   background-position: center;
   color: white;
@@ -61,6 +70,10 @@ h2 {
 
 }
 
+#italicized { 
+  font-style: italic; 
+}
+
 h3 {
   font-size: 24px;
   margin-top: 40px;
@@ -78,22 +91,24 @@ p {
 
 ul {
   font-size: 20px;
-  list-style: none;
   margin-top: 40px;
   text-align: left;
-  list-style: disc;
-  margin-left: 30px;
+  margin-left: 10px;
   background-color: black;
 
 }
 
 li {
   margin-bottom: 20px;
+  list-style: circle;
+  padding: 15px;
+  color: white;
+
 }
 
 /* footer styles */
 footer {
-  background-color: #ffffff;
+  background-color: #382e2e;
   text-align: center;
   padding: 20px;
 }
@@ -101,11 +116,12 @@ footer {
 /* book cover and button styles */
 .book-cover-container {
   display: flex;
-  justify-content: center;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
   align-items: center;
   height: 100vh;
-  background-color: bisque;
- flex-direction: column;
+  background-color: #ffd9d4;
+  flex-wrap:wrap;
 }
 
 .book-cover-container img {
@@ -114,19 +130,17 @@ footer {
 }
 
 #open-book-btn {
+  display: flex;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 24px;
   font-weight: bold;
   color: white;
-  background-color: black;
+  background-color:#ea8d8d;
   padding: 10px;
-  border: none;
-  border-radius: 5px;
+  border-radius: 15px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  /* margin-left: -600px;
-  margin-top: 100px;
-  margin-bottom: 200px; */
 }
 
 #open-book-btn:hover {
@@ -166,4 +180,41 @@ nav a:hover {
   .main-content {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+
+/* .pronounce-container {
+  display: flex;
+  align-items: center;
+} */
+
+#pronounce-container audio {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#pronounce:hover {
+  text-decoration: underline;
+}
+
+.pronounce-text {
+  margin-left: 10px;
+  font-size: 16px;
+  color: white;
+  font-weight: initial;
+}
+
+.btn-mic {
+  background-color: transparent;
+  border: none;
+  color:white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn-mic:hover {
+  text-decoration: underline;
 }
