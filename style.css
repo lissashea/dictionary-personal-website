@@ -41,6 +41,7 @@ main {
   background-size: cover;
   background-position: center;
   color: white;
+  flex-direction: column-reverse;
 }
 
 .left-column, .right-column {
@@ -103,6 +104,8 @@ footer {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: bisque;
+ flex-direction: column;
 }
 
 .book-cover-container img {
@@ -115,12 +118,15 @@ footer {
   font-weight: bold;
   color: white;
   background-color: black;
-  padding: 20px;
+  padding: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  /* margin-left: -600px;
+  margin-top: 100px;
+  margin-bottom: 200px; */
 }
 
 #open-book-btn:hover {
@@ -140,7 +146,7 @@ nav {
 nav a {
   font-size: 20px;
   font-weight: bold;
-  color: #333333;
+  color: white;
   text-decoration: none;
   padding: 10px;
 }
