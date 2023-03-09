@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: 'Karmina Sans', sans-serif;
+  font-family: 'Karmina Sans';
 }
 
 /* header styles */
@@ -285,15 +285,14 @@ nav a:hover {
 .emphasized {
   background-color: #d0877d;
   font-weight: bold;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  } 
-  
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; 
+}
   .emphasized.team-player::before {
-  content: "\01F465 "; /* person playing handball emoji */
+  content: "\01F465"; /* person playing handball emoji */
   }
   
   .emphasized.excellent-candidate::before {
-  content: "\01F44C "; /* thumbs up emoji */
+  content: "\01F44C"; /* thumbs up emoji */
   }
   
   .emphasized.fluent::before {
