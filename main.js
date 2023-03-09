@@ -12,6 +12,7 @@ openBookBtn.addEventListener('click', function() {
   mainContent.style.display = 'grid';
 });
 
+// get references to sound byte and button elements
 const pronounceButton = document.querySelector('#pronounce');
 const audio = document.querySelector('#audio');
 

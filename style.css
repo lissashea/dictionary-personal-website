@@ -115,7 +115,7 @@ footer {
   font-family: 'Karmina Sans', sans-serif;
   color: white;
   background-color: black;
-  flex-direction: col;
+  flex-direction: column;
 }
 
 .smaller-text {
@@ -142,7 +142,7 @@ a:hover {
 
 .footer-image img {
   max-width: 25%;
-  max-height: auto;
+  height: auto;
 }
 
 /* book cover and button styles */
