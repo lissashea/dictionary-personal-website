@@ -1,10 +1,10 @@
-/* general styles -  ensures that the border-box model is used consistently throughout the document,*/
+/* general styling ensures that the border-box model is used consistently throughout the document,*/
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Karmina Sans';
+  font-family: 'Karmina Sans', sans-serif;
 }
 
 /* header styles */
@@ -181,7 +181,7 @@ a:hover {
 
 #open-book-btn:hover {
   background-color: #69696d;
-  transform: translateY(-3px); /*e element is moved 3 pixels upwards along the vertical axis.  */
+  transform: translateY(-3px); /*e element is moved 3 pixels upwards along the x axis.  */
   box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
 }
 
@@ -230,7 +230,7 @@ nav a:hover {
   display: none;
 }
 
-/* media scaling  */
+/* media scaling */
 @media only screen and (max-width: 767px) {
   .main-content {
     display: flex;
@@ -281,7 +281,7 @@ nav a:hover {
   border-radius: 5px;
 }
 
-/* add styles for emphasized words */
+/* add styles for emphasized words before:: creates a psuedo element */
 .emphasized {
   background-color: #d0877d;
   font-weight: bold;
