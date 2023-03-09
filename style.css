@@ -111,7 +111,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  padding: 10px;
+  padding: 5px;
   font-family: 'Karmina Sans', sans-serif;
   color: white;
   background-color: black;
@@ -131,7 +131,7 @@ a {
   font-weight: bold;
   color: white;
   text-decoration: none;
-  padding: 10px;
+  padding: 5px;
 }
 
 a:hover {
@@ -143,6 +143,12 @@ a:hover {
 .footer-image img {
   max-width: 25%;
   height: auto;
+}
+
+.w3c-validation-img {
+  border: 0;
+  width: 88px;
+  height: 31px;
 }
 
 /* book cover and button styles */
@@ -208,10 +214,11 @@ nav a:hover {
 /* styles to place the image*/
  .grid-image {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
   grid-gap: 10px; 
   justify-items:center;
 } 
+
 .grid-image img {
   width:25%;
   height: auto;
@@ -224,6 +231,7 @@ nav a:hover {
   display: none;
 }
 
+/* .main-content element will have one column of equal width.*/
 @media only screen and (max-width: 767px) {
   .main-content {
     grid-template-columns: repeat(1, 1fr);
@@ -278,25 +286,29 @@ nav a:hover {
 .emphasized {
   background-color: #d0877d;
   font-weight: bold;
-  font-family: 'Segoe UI Emoji', 'NotoColorEmoji', 'Apple Color Emoji', 'Segoe UI Symbol', 'Android Emoji', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  } 
+  
+  .emphasized.team-player::before {
+  content: "\01F465 "; /* person playing handball emoji */
+  }
+  
+  .emphasized.excellent-candidate::before {
+  content: "\01F44C "; /* thumbs up emoji */
+  }
+  
+  .emphasized.fluent::before {
+  content: "🧠"; /* brain emoji */
+  }
+  
+  .emphasized.dedicated::before {
+  content: "\01F525 "; /* fire emoji */
+  }
+  
+  .emphasized.engineer::before {
+  content: "\1F6E0 "; /* wrench emoji */
+  }
 
-}
-.emphasized.team-player::before {
-  content: "\1F465 ";
-}
-
-.emphasized.excellent-candidate::before {
-  content: "\1F44C ";
-}
-
-.emphasized.fluent::before {
-  content: "\1F9E0 ";
-}
-
-.emphasized.dedicated::before {
-  content: "\1F525 ";
-}
-
-.emphasized.engineer::before {
-  content: "\1F6E0 ";
-}
+  .emphasized.tennis::before {
+    content:"🎾"; /*tennis ball emoji*/
+  }
