@@ -1,8 +1,8 @@
 /* general styles */
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  /* margin: 0; */
+  /* padding: 0; */
 }
 
 body {
@@ -11,18 +11,15 @@ body {
 
 /* header styles */
 header {
+  width: 100%;
   background-color: black;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-}
-
-.click {
-  text-align: center;
+  justify-content: center;
 }
 
 h1 {
@@ -31,32 +28,31 @@ h1 {
   padding-top: 20px;
 }
 
-/* main section styles */
-main {
-  background-image: url(dictionary_definition.jpeg);
-  background-size: cover;
-  background-position: center;
-}
+/* main container section */
 
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: stretch;
-  max-width: 1200px;
+  align-items: center;
   margin: 0 auto;
   padding: 40px;
   background-image: url(image/dictionary_definition.jpeg);
-  background-size: cover;
   background-position: center;
   color: white;
   flex-direction: column-reverse;
+  border-right: solid black 10px;
+  border-left: solid black 10px;
+  border-bottom: 10px black solid;
+  align-content: stretch;
 }
 
 .left-column, .right-column {
   width: 100%;
   max-width: 540px;
   margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
 }
 
 .right-column {
@@ -67,18 +63,19 @@ h2 {
   font-size: 32px;
   margin-bottom: 20px;
   background-color: black;
-
+  text-shadow:#ccbdc4 1px 0 10px;
 }
 
 #italicized { 
   font-style: italic; 
+  font-size:18px;
 }
 
 h3 {
   font-size: 24px;
   margin-top: 40px;
   background-color: black;
-
+  text-shadow:#ccbdc4 1px 0 10px;
 }
 
 p {
@@ -87,6 +84,7 @@ p {
   margin-bottom: 20px;
   background-color: black;
   padding: 20px;
+  text-shadow:#ccbdc4 1px 0 10px;
 }
 
 ul {
@@ -103,14 +101,48 @@ li {
   list-style: circle;
   padding: 15px;
   color: white;
+  text-shadow:#ccbdc4 1px 0 10px;
 
 }
 
 /* footer styles */
 footer {
-  background-color: #382e2e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
+  font-family: 'Karmina Sans', sans-serif;
+  color: white;
+  background-color: black;
+  flex-direction: col;
+}
+
+.smaller-text {
+  font-size: 80%;
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 5px;
+  text-decoration: line-through;
+}
+
+a {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+a:hover {
+  color: white;
+  border-radius: 5px;
+  background-color: #69696d;
+}
+
+.footer-image img {
+  max-width: 25%;
+  max-height: auto;
 }
 
 /* book cover and button styles */
@@ -122,6 +154,7 @@ footer {
   height: 100vh;
   background-color: #ffd9d4;
   flex-wrap:wrap;
+  border: black solid 10px;
 }
 
 .book-cover-container img {
@@ -140,7 +173,7 @@ footer {
   border-radius: 15px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
 }
 
 #open-book-btn:hover {
@@ -154,21 +187,36 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
   margin-top: 20px;
 }
 
 nav a {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   color: white;
-  text-decoration: none;
+  text-decoration: underline;
   padding: 10px;
 }
 
 nav a:hover {
   color: white;
-  background-color: #f0f0f0;
   border-radius: 5px;
+  background-color: #69696d;
+}
+
+/* styles to place the image*/
+ .grid-image {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px; 
+  justify-items:center;
+} 
+.grid-image img {
+  width:25%;
+  height: auto;
+  border-radius: 10%;
+  border: solid black 8px;
 }
 
 /* styles to hide the main content initially */
@@ -182,11 +230,7 @@ nav a:hover {
   }
 }
 
-/* .pronounce-container {
-  display: flex;
-  align-items: center;
-} */
-
+/* styles to update the voice note */
 #pronounce-container audio {
   position: absolute;
   left: 0;
@@ -200,10 +244,18 @@ nav a:hover {
 }
 
 .pronounce-text {
-  margin-left: 10px;
+  /* margin-left: 10px; */
   font-size: 16px;
   color: white;
-  font-weight: initial;
+  font-weight: bold;
+  text-align: center
+}
+
+.pronounce-container {
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+  border: solid 3px white;
 }
 
 .btn-mic {
@@ -217,4 +269,34 @@ nav a:hover {
 
 .btn-mic:hover {
   text-decoration: underline;
+  color: rgb(21, 21, 21);
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+/* add styles for emphasized words */
+.emphasized {
+  background-color: #d0877d;
+  font-weight: bold;
+  font-family: 'Segoe UI Emoji', 'NotoColorEmoji', 'Apple Color Emoji', 'Segoe UI Symbol', 'Android Emoji', sans-serif;
+
+}
+.emphasized.team-player::before {
+  content: "\1F465 ";
+}
+
+.emphasized.excellent-candidate::before {
+  content: "\1F44C ";
+}
+
+.emphasized.fluent::before {
+  content: "\1F9E0 ";
+}
+
+.emphasized.dedicated::before {
+  content: "\1F525 ";
+}
+
+.emphasized.engineer::before {
+  content: "\1F6E0 ";
 }
